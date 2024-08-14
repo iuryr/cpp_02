@@ -88,4 +88,20 @@ int main(void)
 	std::cout << "--a" << std::endl;
 	std::cout << a.toFloat() << std::endl << std::endl;
 
+	std::cout << "#### STATIC MEMBER FUNCTIONS ####" << std::endl;
+	std::cout << "Printing min(a,b)" << std::endl;
+	std::cout << (Fixed::min(a,b)).toFloat() << std::endl << std::endl;
+
+	const Fixed e =  Fixed(42);
+	const Fixed f =  Fixed(42.42f);
+
+	std::cout << "Printing min(e,f)" << std::endl;
+	std::cout << (Fixed::min(e,f)).toFloat() << std::endl << std::endl;
+
+	std::cout << "Printing max(a,b)" << std::endl;
+	std::cout << (Fixed::max(a,b)).toFloat() << std::endl << std::endl;
+
+	std::cout << "Printing max(e,f)" << std::endl;
+	std::cout << (Fixed::max(e,f)).toFloat() << std::endl << std::endl;
+
 }
