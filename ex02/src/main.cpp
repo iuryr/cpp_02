@@ -70,4 +70,22 @@ int main(void)
 	std::cout << "d = a / b" << std::endl;
 	std::cout << d.toFloat() << std::endl << std::endl;
 
+	std::cout << "#### INCREMNT AND DECREMENT OPERATIONS ####" << std::endl;
+
+	++a;
+	std::cout << "++a" << std::endl;
+	std::cout << a.toFloat() << std::endl << std::endl;
+
+	a++;
+	std::cout << "a++" << std::endl;
+	std::cout << a.toFloat() << std::endl << std::endl;
+
+	a--;
+	std::cout << "a--" << std::endl;
+	std::cout << a.toFloat() << std::endl << std::endl;
+
+	--a;
+	std::cout << "--a" << std::endl;
+	std::cout << a.toFloat() << std::endl << std::endl;
+
 }

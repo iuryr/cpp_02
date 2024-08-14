@@ -146,3 +146,29 @@ Fixed	Fixed::operator/(Fixed& rhs)
 	result = this->toFloat() / rhs.toFloat();
 	return Fixed(result);
 }
+
+Fixed&	Fixed::operator++(void)
+{
+	this->setRawBits(this->getRawBits() + 1);
+	return *this;
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed	old(*this);
+	this->setRawBits(this->getRawBits() + 1);
+	return old;
+}
+
+Fixed&	Fixed::operator--(void)
+{
+	this->setRawBits(this->getRawBits() - 1);
+	return *this;
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed	old(*this);
+	this->setRawBits(this->getRawBits() - 1);
+	return old;
+}

@@ -26,10 +26,16 @@ public:
 	bool	operator<=(Fixed& rhs);
 	bool	operator==(Fixed& rhs);
 	bool	operator!=(Fixed& rhs);
+
 	Fixed	operator+(Fixed& rhs);
 	Fixed	operator-(Fixed& rhs);
 	Fixed	operator*(Fixed& rhs);
 	Fixed	operator/(Fixed& rhs);
+
+	Fixed&	operator++(void); //prefix increment
+	Fixed	operator++(int); //postfix increment
+	Fixed&	operator--(void); //prefix decrement
+	Fixed	operator--(int); //postfix decrement
 
 private:
 	int					_raw_bits;
