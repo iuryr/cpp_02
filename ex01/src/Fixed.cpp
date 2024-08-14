@@ -1,6 +1,3 @@
-#ifndef _FIXED_HPP_
-#define	_FIXED_HPP_
-
 #include "Fixed.hpp"
 #include <iostream>
 #include <cmath>
@@ -21,7 +18,8 @@ Fixed::~Fixed(void)
 Fixed::Fixed(const Fixed& object)
 {
 	std::cout << "Copy constructor called." << std::endl;
-	this->_raw_bits = object._raw_bits;
+	*this = object;
+	this->_raw_bits = object.getRawBits();
 }
 
 Fixed::Fixed(const int number)
@@ -72,10 +70,8 @@ int	Fixed::toInt(void) const
 	return this->_raw_bits >> Fixed::_fractional_bits;
 }
 
-std::ostream operator<<(std::ostream &os, Fixed const &obj)
+std::ostream& operator<<(std::ostream &os, Fixed const &obj)
 {
 	os << obj.toFloat();
 	return os;
 }
-
-#endif //_FIXED_HPP_
