@@ -26,6 +26,8 @@ public:
 	bool	operator<=(Fixed& rhs);
 	bool	operator==(Fixed& rhs);
 	bool	operator!=(Fixed& rhs);
+	Fixed	operator+(Fixed& rhs);
+	Fixed	operator-(Fixed& rhs);
 
 private:
 	int					_raw_bits;

@@ -116,3 +116,17 @@ bool Fixed::operator!=(Fixed& rhs)
 		return true;
 	return false;
 }
+
+Fixed	Fixed::operator+(Fixed& rhs)
+{
+	Fixed result;
+	result.setRawBits(this->getRawBits() + rhs.getRawBits());
+	return result;
+}
+
+Fixed	Fixed::operator-(Fixed& rhs)
+{
+	Fixed result;
+	result.setRawBits(this->getRawBits() - rhs.getRawBits());
+	return result;
+}
