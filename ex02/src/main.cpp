@@ -61,4 +61,13 @@ int main(void)
 	d = a - b;
 	std::cout << "d = a - b" << std::endl;
 	std::cout << d.toFloat() << std::endl << std::endl;
+
+	d = a * b;
+	std::cout << "d = a * b" << std::endl;
+	std::cout << d.toFloat() << std::endl << std::endl;
+
+	d = a / b;
+	std::cout << "d = a / b" << std::endl;
+	std::cout << d.toFloat() << std::endl << std::endl;
+
 }

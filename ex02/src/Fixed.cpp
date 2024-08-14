@@ -130,3 +130,19 @@ Fixed	Fixed::operator-(Fixed& rhs)
 	result.setRawBits(this->getRawBits() - rhs.getRawBits());
 	return result;
 }
+
+Fixed	Fixed::operator*(Fixed& rhs)
+{
+	float	result;
+
+	result = this->toFloat() * rhs.toFloat();
+	return Fixed(result);
+}
+
+Fixed	Fixed::operator/(Fixed& rhs)
+{
+	float	result;
+
+	result = this->toFloat() / rhs.toFloat();
+	return Fixed(result);
+}
