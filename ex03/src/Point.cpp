@@ -2,42 +2,40 @@
 
 Point::Point(void): _x(0), _y(0)
 {
-	std::cout << "Point default constructor called" << std::endl;
+	// std::cout << "Point default constructor called" << std::endl;
 }
 
 Point::~Point(void)
 {
-	std::cout << "Point default destructor called" << std::endl;
+	// std::cout << "Point default destructor called" << std::endl;
 }
 
 Point::Point(const float x, const float y): _x(x), _y(y)
 {
-	std::cout << "Point float constructor called" << std::endl;
+	// std::cout << "Point float constructor called" << std::endl;
 }
 
 Point::Point(const Point& obj): _x(obj._x), _y(obj._y)
 {
-	// this->setX(obj.getX());
-	// this->setY(obj.getY());
+	// std::cout << "Point copy constructor called" << std::endl;
 }
 
-
-void Point::setX(Fixed x)
+Point& Point::operator=(Point& obj)
 {
-	this->_x = x;
+	if (this != &obj)
+	{
+		(Fixed&) this->_x = obj._x;
+		(Fixed&) this->_y = obj._y;
+	}
+	return *this;
 }
 
-void Point::setY(Fixed y)
+float Point::getX(void) const
 {
-	this->_y = y;
+	return this->_x.toFloat();
 }
 
-Fixed Point::getX(void) const
+float Point::getY(void) const
 {
-	return this->_x;
-}
-
-Fixed Point::getY(void) const
-{
-	return this->_y;
+	return this->_y.toFloat();
 }

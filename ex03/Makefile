@@ -1,4 +1,4 @@
-NAME = Fixed
+NAME = bsp
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror --std=c++98
@@ -8,7 +8,8 @@ SRC_DIR = src/
 SRC_FILES = $(addprefix $(SRC_DIR), \
 	  main.cpp \
 	  Fixed.cpp \
-	  Point.cpp)
+	  Point.cpp \
+	  bsp.cpp)
 
 OBJ_DIR = obj/
 OBJ_FILES = $(addprefix $(OBJ_DIR), $(notdir $(SRC_FILES:.cpp=.o)))

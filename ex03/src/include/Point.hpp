@@ -6,22 +6,20 @@
 class Point
 {
 private:
-	Fixed _x;
-	Fixed _y;
+	Fixed const _x;
+	Fixed const _y;
 
 public:
 	Point();
 	~Point();
 	Point(const float x, const float y);
 	Point(const Point& obj);
-	// Point& operator=(Point& obj);
+	Point& operator=(Point& obj);
 
-	void setX(Fixed x);
-	void setY(Fixed y);
-
-	Fixed getX(void) const;
-	Fixed getY(void) const;
-
+	float getX(void) const;
+	float getY(void) const;
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif //_POINT_HPP
