@@ -103,5 +103,4 @@ int main(void)
 
 	std::cout << "Printing max(e,f)" << std::endl;
 	std::cout << (Fixed::max(e,f)).toFloat() << std::endl << std::endl;
-
 }

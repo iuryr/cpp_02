@@ -14,14 +14,13 @@ Fixed::Fixed(void)
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Default destructor called." << std::endl;
+	std::cout << "Destructor called." << std::endl;
 }
 
 Fixed::Fixed(Fixed& object)
 {
 	std::cout << "Copy constructor called." << std::endl;
 	*this = object;
-	this->_raw_bits = object.getRawBits();
 }
 
 Fixed&	Fixed::operator=(const Fixed& other)
@@ -29,7 +28,7 @@ Fixed&	Fixed::operator=(const Fixed& other)
 	if (this != &other)
 	{
 		std::cout << "Copy assignment operator called" << std::endl;
-		this->_raw_bits = other._raw_bits;
+		this->_raw_bits = other.getRawBits();
 	}
 	return *this;
 }
